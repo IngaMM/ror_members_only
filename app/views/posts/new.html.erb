@@ -1,0 +1,17 @@
+<% provide(:title, "New post") %>
+<h1>New post</h1>
+
+<div>
+  <div>
+    <%= form_for(@post) do |f| %>
+      <%= render 'shared/error_messages', object: @post  %>
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+      <br>
+      <%= f.label :body %>
+      <%= f.text_field :body, :size => "200"  %>
+      <br>
+      <%= f.submit "Submit post"%>
+    <% end %>
+  </div>
+</div>

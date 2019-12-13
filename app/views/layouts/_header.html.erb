@@ -1,0 +1,18 @@
+<header>
+  <nav>
+    <%= link_to "Home",   root_path %>
+    &nbsp
+    <%= link_to "View all posts",   posts_path %>
+    &nbsp
+    <% if logged_in? %>
+      <%= link_to "Log out", logout_path, method: :delete %>
+      &nbsp
+      <%= link_to "Create a post", new_post_path%>
+    <% else %>
+      <%= link_to "Log in", login_path %>
+    <% end %>
+  </nav>
+  <% if logged_in? %>
+    <p> You are logged in as <%= current_user.name %> </p>
+  <% end %>
+</header>

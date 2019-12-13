@@ -1,0 +1,6 @@
+<li>
+  <strong><%= post.title%>:</strong> <%= post.body%>
+  <% if logged_in?%>
+    <i>[by <%= post.user.name%>]</i>
+  <% end %>
+</li>
